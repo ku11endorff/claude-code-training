@@ -1,45 +1,176 @@
 # Weather App
-This weather web app built with Flask and OpenWeather API displays the weather forecast for any city. I designed a simplistic UI to make it easier for the user to find the relevant information. All HTML, CSS, and Python code was written from scratch and the CSS is optimised for mobile and desktop through the use of CSS grid, flexbox, and media queries.
 
-## Screenshots (Desktop)
-<img src="/screenshots/weather_app_desktop_home_page_screenshot.png">
-<img src="/screenshots/weather_app_desktop_forecast_page_screenshot.png">
-<img src="/screenshots/weather_app_desktop_error_page_screenshot.png">
+A responsive Flask web application that displays current conditions and a 5-day forecast for any city, powered by the [OpenWeatherMap API](https://openweathermap.org/api).
 
-## Screenshots (Mobile)
-<img src="/screenshots/weather_app_iphone_forecast_page_screenshot.png" style="width:400px;"> <img src="/screenshots/weather_app_iphone_home_page_screenshot.png" style="width:400px;">
+## Screenshots
 
-## Reflection
-Building a Python project from scratch without relying on a tutorial taught me a lot but I was also able to implement the app's key functionality (getting and displaying weather data) due to the work I did with APIs in Angela Yu's Python bootcamp. While deploying this web app, I  learned about git and version control as well as storing API keys as environment variables with .env and the purpose of .gitignore. This project turned out to be frustrating and complicated at times but I learned and grew a lot as a developer by tackling each problem. For instance, I struggled to make this website responsive because I discovered that the Chrome browser tools are not entirely accurate for the mobile view. Hence, when the app was deployed, the website didn't look the way I expected ore desired on mobile. So I switched to a free desktop application called Responsively and it provided views for multiple devices which allowed me to improve my CSS. In addition, I had difficulty positioning my footer at the bottom of my page and had to refer to [this resource](https://stackoverflow.com/questions/51683107/making-a-footer-stay-at-the-bottom-of-the-page-both-in-mobile-view-and-desktop-v) to adjust my CSS accordingly. 
+**Desktop**
 
-If I were to do this project again, there are a few changes I would make. I would make the website render beautifully on iPads as well by eliminating the space between elements. I also wasn't sure how to add more functionality to this app while maintaining a seamless UI/UX design this time and I would love to do so in the future. E.g. I could add an option for users to specify the country of the city they enter (if multiple countries share the same city name). I could also display the low and high temperatures for each day in the five day forecast instead of only displaying the temperature at noon (which I understand is not an accurate estimate of the overall temperature). It would also be useful to enable location detection to allow the user to get more accurate weather data for their current location by using their precise coordinates instead of relying on the geocoding API provided by OpenWeather.  
+<img src="/screenshots/weather_app_desktop_home_page_screenshot.png" alt="Home page">
+<img src="/screenshots/weather_app_desktop_forecast_page_screenshot.png" alt="Forecast page">
+<img src="/screenshots/weather_app_desktop_error_page_screenshot.png" alt="Error page">
 
-## Useful Resources
-- [OpenWeather API Documentation](https://openweathermap.org/api/one-call-3)
-- [Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- [StackOverflow Post on Centering in CSS Grid](https://stackoverflow.com/questions/45536537/centering-in-css-grid)
-- [Youtube video on searching blog posts with Flask](https://www.youtube.com/watch?v=kmtZTo-_gJY)
-- [Article on retrieving HTML form data with Flask](https://www.geeksforgeeks.org/retrieving-html-from-data-using-flask/)
-- [StackOverflow post on building Flask app search bar](https://stackoverflow.com/questions/39960942/flask-app-search-bar)
-- [Article on storing API keys as environment variables](https://jonathansoma.com/lede/foundations-2019/classes/apis/keeping-api-keys-secret/)
-– [StackOverflow post on storing API keys in Heroku](https://stackoverflow.com/questions/71593743/storing-api-key-in-heroku)
-- [Making a footer stay at the bottom of the page both in mobile view and desktop view](https://stackoverflow.com/questions/51683107/making-a-footer-stay-at-the-bottom-of-the-page-both-in-mobile-view-and-desktop-v)
+**Mobile**
 
-## Image Credit
-- [Home page background image](https://unsplash.com/photos/2KXEb_8G5vo)
-- [Error page desktop background image](https://unsplash.com/photos/U-Kty6HxcQc)
+<img src="/screenshots/weather_app_iphone_home_page_screenshot.png" style="width:400px;" alt="Mobile home"> <img src="/screenshots/weather_app_iphone_forecast_page_screenshot.png" style="width:400px;" alt="Mobile forecast">
 
-### Icons 
-- <a target="_blank" href="https://icons8.com/icon/pLiaaoa41R9n/wind">Wind</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/37802/thermometer">Thermometer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/99328/clouds">Clouds</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/101829/rain">Rain</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/67657/fog">Fog</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/hXkspV0LTEoE/snow">Snow</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/G3xS4dQTvswX/rainy-weather">Rainy Weather</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/101843/storm">Storm</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/59878/search">Search</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/39789/chevron-left">Chevron Left</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/99362/summer">Summer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/akbaie9da2Be/tornado">Tornado</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+---
+
+## Features
+
+- Current temperature, weather condition, and wind speed for any city
+- 5-day forecast filtered to midday readings
+- Responsive layout (CSS Grid + Flexbox) for desktop and mobile
+- Graceful error page for unrecognised city names
+
+---
+
+## Prerequisites
+
+- Python 3.8+
+- A free [OpenWeatherMap API key](https://home.openweathermap.org/users/sign_up)
+
+---
+
+## Setup
+
+### 1. Clone and create a virtual environment
+
+```bash
+git clone <repo-url>
+cd weather-app
+
+python3 -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+```
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Configure your API key
+
+Create a `.env` file in the project root:
+
+```bash
+OWM_API_KEY=your_api_key_here
+```
+
+The app reads this value via `python-dotenv` at startup (`main.py:7-12`). The `.gitignore` already excludes `.env` — never commit your key.
+
+---
+
+## Running the app
+
+### Development
+
+```bash
+python main.py
+```
+
+Flask's built-in server starts on `http://127.0.0.1:5000` with hot-reload enabled (`debug=True`).
+
+### Production
+
+The included `Procfile` configures [Gunicorn](https://gunicorn.org/) for deployment:
+
+```bash
+gunicorn main:app
+```
+
+Default port is 8000. To specify a port:
+
+```bash
+gunicorn main:app --bind 0.0.0.0:5000
+```
+
+---
+
+## Usage
+
+1. Open `http://localhost:5000` in a browser.
+2. Type a city name into the search box and press Enter.
+3. The forecast page shows:
+   - Today's temperature (°C), weather condition, min/max range, and wind speed
+   - A 5-day strip showing the noon forecast for each day
+
+**Example cities to try:** `London`, `Tokyo`, `New York`, `São Paulo`, `Cape Town`
+
+If the city name is not recognised by the OpenWeatherMap geocoding API, the app redirects to an error page with a link back to the search form.
+
+---
+
+## Project structure
+
+```
+weather-app/
+├── main.py                  # Flask app — all routes and API calls
+├── requirements.txt         # Python dependencies
+├── Procfile                 # Gunicorn entry point for PaaS deployment
+├── .env                     # API key (not committed — create this yourself)
+├── templates/
+│   ├── index.html           # Home page with search form
+│   ├── city.html            # Forecast display page
+│   └── error.html           # Invalid city error page
+├── static/
+│   ├── css/main.css         # Single stylesheet (responsive)
+│   └── assets/              # Weather condition icons + background images
+├── test_main.py             # Unit tests (mock at requests.get level)
+└── test_integration.py      # Integration tests (mock at HTTP transport level)
+```
+
+### API endpoints used
+
+| Endpoint | Purpose |
+|---|---|
+| `geo/1.0/direct` | Resolve city name → latitude/longitude |
+| `data/2.5/weather` | Current weather conditions |
+| `data/2.5/forecast` | 5-day / 3-hour forecast |
+
+All three calls happen sequentially in `get_weather()` (`main.py:29-87`) on each page request.
+
+---
+
+## Running tests
+
+Install pytest if not already present:
+
+```bash
+pip install pytest
+```
+
+Run all tests:
+
+```bash
+pytest test_main.py test_integration.py -v
+```
+
+| File | Type | Count | What's tested |
+|---|---|---|---|
+| `test_main.py` | Unit | 27 | Route handlers, data transformation, API call structure, network/HTTP error paths |
+| `test_integration.py` | Integration | 21 | Full HTTP pipeline, query param encoding, API call ordering, error short-circuit |
+
+No live network calls are made during tests — all OpenWeatherMap responses are intercepted by mocks.
+
+---
+
+## Known limitations
+
+- **Units are hardcoded to metric (°C).** There is no toggle for Fahrenheit.
+- **All 3 API calls are synchronous and sequential.** Each page load waits for ~3 round trips. A future improvement would use `httpx` with `async`/`await` to run them concurrently.
+- **No caching.** Searching the same city twice makes 6 API calls. Adding a short TTL cache (e.g. `flask-caching`) would reduce latency and API quota usage.
+- **The 5-day forecast uses noon readings only.** This is a reasonable approximation but not the true daily high/low.
+- **No country disambiguation.** Searching "London" always returns the first geocoding result (London, UK). A future improvement would let users specify a country code.
+
+---
+
+## Credits
+
+Original application by [Rachana Hegde](https://rachanahegde.squarespace.com/).
+
+**Icons** from [Icons8](https://icons8.com): Wind, Thermometer, Clouds, Rain, Fog, Snow, Drizzle, Thunderstorm, Search, Chevron Left, Clear (Summer), Tornado
+
+**Background images** from [Unsplash](https://unsplash.com):
+[Home page](https://unsplash.com/photos/2KXEb_8G5vo) · [Error page](https://unsplash.com/photos/U-Kty6HxcQc)

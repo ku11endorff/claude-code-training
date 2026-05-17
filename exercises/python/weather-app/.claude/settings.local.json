@@ -21,7 +21,13 @@
       "WebSearch",
       "Bash(curl:*)",
       "Read(//Users/kennethkousen/Documents/claude-code-training/exercises/**)",
-      "Bash(npm install)"
+      "Bash(npm install)",
+      "Bash(pip3 install *)",
+      "Read(//Users/kullendorff/**)",
+      "Bash(python3 -m venv /tmp/weather-venv)",
+      "Bash(/tmp/weather-venv/bin/pip install *)",
+      "Bash(/tmp/weather-venv/bin/pytest *)",
+      "Bash(/tmp/weather-venv/bin/python *)"
     ],
     "deny": []
   },
